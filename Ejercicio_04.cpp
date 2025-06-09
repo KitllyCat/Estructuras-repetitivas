@@ -1,21 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-	int n, gasto, gastoF, x=1;
+int main() {
+    int n, gasto;
+    int gastoTotal = 0;
 
-	cout<<"Ingresa la cantidad de gastos que desea ingresar: ";
-	cin>>n;
-	for(int i=0;i<n;i++){
-		cout<<"Ingrese el "<<x<<". monto: ";
-		cin>>gasto;
-		gastoF=gasto+gastoF;
-		x++;
-	}
-	
-	cout<<endl;
-	cout<<"El total de "<<n<<" gastos es de s/"<<gastoF<<"."<<endl;
-	
+    cout << "Ingrese la cantidad de gastos que desea registrar: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        cout << "Ingrese el monto del gasto " << i << ": ";
+        cin >> gasto;
+        gastoTotal += gasto;
+    }
+
+    cout << endl;
+    cout << "El total de " << n << " gastos es de S/ " << gastoTotal << "." << endl;
+
     return 0;
 }
-
