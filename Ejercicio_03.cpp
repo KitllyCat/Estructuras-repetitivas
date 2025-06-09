@@ -1,23 +1,28 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-	int num,sumT=0,x=0,y=0,z;
-	do{
-		cout<<"Ingrese la cantidad de 'n' numeros que desea sumar: ";
-		cin>>num;
-		
-		if(num<=0){
-			cout<<"El numero no puede ser cero o menor"<<endl;
-		}
-	}while(num<=0);
-	
-	for(int i=0;i<num;i++){
-		y++;
-		x=x+y;
-	}
-	cout<<"La suma total de '"<<num<<"' numeros es de "<<x<<"."<<endl;
-	
+int main() {
+    int cantidadNumeros;
+    int sumaTotal = 0;
+
+    // Solicitar una cantidad válida
+    do {
+        cout << "Ingrese la cantidad de números que desea sumar (1 + 2 + ... + n): ";
+        cin >> cantidadNumeros;
+
+        if (cantidadNumeros <= 0) {
+            cout << "El número debe ser mayor que cero." << endl;
+        }
+    } while (cantidadNumeros <= 0);
+
+    // Calcular la suma de los primeros n números naturales
+    for (int i = 1; i <= cantidadNumeros; i++) {
+        sumaTotal += i;
+    }
+
+    cout << "La suma total de los primeros " << cantidadNumeros << " números naturales es: " << sumaTotal << "." << endl;
+
     return 0;
 }
+
 

@@ -3,21 +3,23 @@
 
 using namespace std;
 
-int main(){
-	SetConsoleOutputCP(CP_UTF8);
-	int numero;	
-	int contador = 0;
-	
-	do{
-		cout << "Ingrese su número: ";
-		cin >> numero;
-		contador++;
+int main() {
+    SetConsoleOutputCP(CP_UTF8); // Para permitir salida en UTF-8 en consola de Windows
 
-		if (numero < 0){
-			cout << "La cantidad de números positivos es de: " << contador - 1 << endl;
-			cout << "Fin del programa..." << endl;
-		}
-	}while (numero > 0);
-	
+    int numero;
+    int contador = 0;
+
+    do {
+        cout << "Ingrese un número (negativo para terminar): ";
+        cin >> numero;
+
+        if (numero >= 0) {
+            contador++;
+        } else {
+            cout << "\nLa cantidad de números positivos ingresados es: " << contador << endl;
+            cout << "Fin del programa..." << endl;
+        }
+    } while (numero >= 0);
+
     return 0;
 }
