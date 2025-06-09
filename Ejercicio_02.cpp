@@ -1,16 +1,23 @@
 #include <iostream>
+#include <windows.h>
+
 using namespace std;
 
 int main(){
-	int num;	
+	SetConsoleOutputCP(CP_UTF8);
+	int numero;	
+	int contador = 0;
+	
 	do{
-		cout<<"Ingrese su numero: ";
-		cin>>num;
-		if (num<0){
-			cout<<"Fin de la captura"<<endl;
+		cout << "Ingrese su número: ";
+		cin >> numero;
+		contador++;
+
+		if (numero < 0){
+			cout << "La cantidad de números positivos es de: " << contador - 1 << endl;
+			cout << "Fin del programa..." << endl;
 		}
-	}while (num>0);
+	}while (numero > 0);
 	
     return 0;
 }
-
